@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Password Manager</title>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="brand"><a href="">Logo</a></div>
+            <ul>
+                <li><a href="javascript:;" onclick="displayModal('home-modal');">Home</a></li>
+                <li><a href="javascript:;" onclick="displayModal('login-modal');">Login</a></li>
+                <li><a href="javascript:;" onclick="displayModal('signup-modal');">SignUp</a></li>
+                <li><a href="javascript:;" onclick="displayModal('contact-modal');">contact</a></li>
+                <li><a href="javascript:;" onclick="displayModal('add-live-chat');">live chat</a></li>
+                <li><a href="javascript:;" onclick="displayModal('add-call');">live call</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+        <!--login modal-->
+        <div class="modal" id="home-modal">
+            <form action="">
+                <h2 id="home">Welcome</h2>
+               
+            </form>
+        </div>
+
+
+    <!--Modals-->
+    <div class="modals-wrapper">
+        <span id="close-modal" title="close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <!--login modal-->
+        <div class="modal" id="login-modal">
+            <form action="">
+                <h2>Login</h2>
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="password">
+                <input type="submit" value="login">
+            </form>
+        </div>
+
+        <!--signup modal-->
+        <div class="modal" id="signup-modal">
+            <form action="">
+                <h2>SignUp</h2>
+                <input type="text" name="username" placeholder="username">
+                <input type="email" name="email" placeholder="email">
+                
+                <input type="password" name="password" placeholder="password">
+                <input type="password2" name="password2" placeholder="confirm password">
+                <input type="submit" value="register">
+            </form>
+        </div>
+
+        <!-- contact modal-->
+        <div class="modal" id="contact-modal">
+           
+            <form id="contactForm" onsubmit="return validateForm()">
+                <h1>contact form</h1><br>
+                <input type="text" id="name" name="name" required placeholder="name"><br>
+            
+                <input type="text" id="mobileNumber" name="mobileNumber" required placeholder="mobileNumber">
+               
+            
+                <input type="email" id="email" name="email" required placeholder="email"><br>
+            
+               
+                <textarea id="request" name="request" rows="4" cols="50" required placeholder="request"></textarea><br>
+            
+                <input type="submit" value="Submit">
+              </form>
+        </div>
+
+        <!--live chat modal-->
+        <div class="modal" id="add-live-chat">
+            <div id="chat-container">
+                <h1>start chat</h1>
+                <ul id="message-list"></ul>
+                <div id="input-container">
+                  <input type="text" id="message-input" placeholder="Enter your message...">
+                  <button id="send-button">Send</button>
+                </div>
+        </div>
+        
+        </div>
+        <!-- live call modal -->
+        <div class="modal" id="add-call">
+            <h1>start call</h1>
+            <div style="text-align: center; padding: 100px;">
+               
+                <i class="icon fas fa-phone" id="call-button">Go to call</i>
+              </div>
+        </div>
+        
+        </div>
+    </div>
+
+    
+
+       
+
+
+
+    
+    
+    
+</body>
+</html>
